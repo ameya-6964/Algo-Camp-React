@@ -4,9 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pure React</title>
+    <style>
+      .child {
+        color: red;
+      }
+      #parent {
+        background-color: yellow;
+        height: 20vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
-    <script src="script.js"></script>
+    <div id="root"></div>
     <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
@@ -15,5 +28,6 @@
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
