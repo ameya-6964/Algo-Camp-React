@@ -6,7 +6,9 @@ const Counter = () => {
     setValue((value) => value + 1);
   }
   function substractClickHandler() {
-    if (value === 0) {
+    if (value < 1) {
+      alert("Cannot Go Negative");
+      setValue(0);
       return;
     }
     setValue((value) => value - 1);
