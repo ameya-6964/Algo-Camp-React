@@ -1,0 +1,11 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  background-color: red;
+  color: wheat;
+  height: 10vh;
+  list-style: none;
+}

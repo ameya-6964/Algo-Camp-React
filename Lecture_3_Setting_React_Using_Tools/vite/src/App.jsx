@@ -1,10 +1,19 @@
-import "./App.css";
+import Content from "./Components/Content/Content";
+import Footer from "./Components/Footer/Footer";
+import NavBar from "./Components/Navbar/NavBar";
 
 function App() {
   return (
-    <div>
-      <h1>Welcome To Vite React App</h1>
-    </div>
+    <>
+      <NavBar />
+      <div className="main__container">
+        <Content title={"I Am Content 1"} bgColor={"orange"} />
+        <Content title={"I Am Content 2"} bgColor={"purple"} />
+        <Content title={"I Am Content 3"} bgColor={"limegreen"} />
+        <Content title={"I Am Content 4"} bgColor={"crimson"} />
+      </div>
+      <Footer />
+    </>
   );
 }
 
