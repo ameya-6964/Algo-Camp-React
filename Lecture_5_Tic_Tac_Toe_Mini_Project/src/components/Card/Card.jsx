@@ -1,9 +1,13 @@
 import Icon from "../Icon/Icon";
 import "./Card.css";
 
-const Card = ({ iconName }) => {
+const Card = ({ iconName, onPlay }) => {
+  function playMove() {
+    onPlay();
+  }
+
   return (
-    <div className="card">
+    <div className="card" onClick={playMove}>
       <Icon name={iconName} />
     </div>
   );
