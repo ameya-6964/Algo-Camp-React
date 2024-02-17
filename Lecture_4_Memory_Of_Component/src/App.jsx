@@ -1,10 +1,11 @@
-import Counter from "./Components/Counter";
+/* import Counter from "./Components/Counter"; */
 import "./App.css";
+import TodoDemo from "./Components/TodoDemo";
 
 function App() {
   return (
     <>
-      <Counter />
+      <TodoDemo />
     </>
   );
 }

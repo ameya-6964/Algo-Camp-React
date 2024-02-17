@@ -37,3 +37,30 @@ button {
 .substract:hover {
   background-color: rgb(29, 29, 190);
 }
+
+.delete {
+  background-color: red;
+}
+
+.delete:hover {
+  background-color: rgb(148, 0, 0);
+}
+
+.todoInfo {
+  width: 580px;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+.container input {
+  width: 400px;
+  font-size: 1.5rem;
+}
