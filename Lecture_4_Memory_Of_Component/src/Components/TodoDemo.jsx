@@ -46,15 +46,13 @@ const TodoDemo = () => {
           Add Todo
         </button>
       </div>
-      <ul>
-        <TodoList
-          todos={todos}
-          deleteTodo={deleteTodo}
-          toggleEdit={toggleEdit}
-          updateTodo={updateTodo}
-          editingTodo={editingTodo}
-        />
-      </ul>
+      <TodoList
+        todos={todos}
+        deleteTodo={deleteTodo}
+        toggleEdit={toggleEdit}
+        updateTodo={updateTodo}
+        editingTodo={editingTodo}
+      />
     </div>
   );
 };
