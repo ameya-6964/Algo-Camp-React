@@ -1,14 +1,8 @@
 import { useState } from "react";
 import TodoList from "./TodoList";
 
-let todosData = [
-  { id: Date.now().toLocaleString() + 12, data: "Complete React.js" },
-  { id: Date.now().toLocaleString() + 123, data: "Find A Job" },
-  { id: Date.now().toLocaleString() + 124, data: "Earn Exp" },
-  { id: Date.now().toLocaleString() + 126, data: "Startsaving" },
-];
 const TodoDemo = () => {
-  const [todos, setTodos] = useState(todosData);
+  const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState("");
   function addHandler() {
     if (newTodo.trim() !== "") {
