@@ -4,6 +4,7 @@ import TodoList from "./TodoList";
 const TodoDemo = () => {
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState("");
+  const [editingTodo, setEditingTodo] = useState(null); // For tracking which todo is edited
   function addHandler() {
     if (newTodo.trim() !== "") {
       // Ensure there's actual text to add
@@ -18,6 +19,18 @@ const TodoDemo = () => {
   function deleteTodo(id) {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   }
+
+  const toggleEdit = (id) => {
+    setEditingTodo((prev) => (prev === id ? null : id));
+  };
+
+  const updateTodo = (id, newData) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, data: newData } : todo
+      )
+    );
+  };
 
   return (
     <div>
@@ -34,7 +47,13 @@ const TodoDemo = () => {
         </button>
       </div>
       <ul>
-        <TodoList todos={todos} deleteTodo={deleteTodo} />
+        <TodoList
+          todos={todos}
+          deleteTodo={deleteTodo}
+          toggleEdit={toggleEdit}
+          updateTodo={updateTodo}
+          editingTodo={editingTodo}
+        />
       </ul>
     </div>
   );
